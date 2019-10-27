@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 ARCH:=arm
 BOARD:=sunxi
 BOARDNAME:=Allwinner A1x/A20/A3x/R40
-FEATURES:=fpu usb ext4 display rtc squashfs
+FEATURES:=fpu usb ext4 display rtc usbgadget squashfs
 SUBTARGETS:=cortexa8 cortexa7 cortexa53
 MAINTAINER:=Zoltan HERPAI <wigyori@uid0.hu>
 
