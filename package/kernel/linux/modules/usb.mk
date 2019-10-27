@@ -111,6 +111,7 @@ $(eval $(call KernelPackage,phy-ath79-usb))
 define KernelPackage/usb-gadget
   TITLE:=USB Gadget support
   KCONFIG:=CONFIG_USB_GADGET
+  HIDDEN:=1
   FILES:=\
 	$(LINUX_DIR)/drivers/usb/gadget/udc/udc-core.ko
   AUTOLOAD:=$(call AutoLoad,21,udc-core,1)
@@ -128,6 +129,7 @@ define KernelPackage/usb-lib-composite
   TITLE:=USB lib composite
   KCONFIG:=CONFIG_USB_LIBCOMPOSITE
   DEPENDS:=+kmod-usb-gadget +kmod-fs-configfs
+  HIDDEN:=1
   FILES:=$(LINUX_DIR)/drivers/usb/gadget/libcomposite.ko
   AUTOLOAD:=$(call AutoLoad,50,libcomposite)
   $(call AddDepends/usb)
